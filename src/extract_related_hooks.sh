@@ -14,7 +14,6 @@ function extract_related_hooks() {
     local hook_group=$2
     local hook_line_number=`cat $filename | grep -n $hook_group | cut -d':' -f1`
 
-
     local lines_till_next_hook=$(count_lines_until_next_hook $filename $hook_line_number)
     related_hooks=$(cat $filename |
 	grep -A$lines_till_next_hook $hook_group |
@@ -23,11 +22,7 @@ function extract_related_hooks() {
 	sed 's/ //g' \
      )
     echo $related_hooks
-
-
 }
-
-
 
 #path_to_file='../hooks.ini'
 #candidates=$(extract_related_hooks $path_to_file 'pre-commit');
