@@ -1,0 +1,3 @@
+#!/bin/bash
+echo "Current git config: "
+git config -l
