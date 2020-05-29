@@ -23,10 +23,3 @@ function extract_related_hooks() {
      )
     echo $related_hooks
 }
-
-#path_to_file='../hooks.ini'
-#candidates=$(extract_related_hooks $path_to_file 'pre-commit');
-#
-#for candidate in ${candidates};do
-#    echo $candidate
-#done
